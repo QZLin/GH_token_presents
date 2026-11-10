@@ -1,0 +1,409 @@
+<react-partial
+  partial-name="integration-permission-selector"
+  data-ssr="true"
+  data-attempted-ssr="true"
+  data-react-profiling="false"
+  data-catalyst=""
+  class="loaded"
+>
+  <script type="application/json" data-target="react-partial.embeddedData">
+    {
+      "props": {
+        "resources": {
+          "repository": [
+            {
+              "name": "actions",
+              "metadata": {
+                "title": "Actions",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            },
+            {
+              "name": "statuses",
+              "metadata": {
+                "title": "Commit statuses",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            },
+            {
+              "name": "contents",
+              "metadata": {
+                "title": "Contents",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            },
+            {
+              "name": "issues",
+              "metadata": {
+                "title": "Issues",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            },
+            {
+              "name": "metadata",
+              "metadata": {
+                "title": "Metadata",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only"]
+              }
+            },
+            {
+              "name": "pull_requests",
+              "metadata": {
+                "title": "Pull requests",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            },
+            {
+              "name": "actions_variables",
+              "metadata": {
+                "title": "Variables",
+                "actions": {
+                  "none": "No access",
+                  "read": "Read-only",
+                  "write": "Read and write",
+                  "admin": "Admin"
+                },
+                "fgp": ["Read-only", "Read and write"]
+              }
+            }
+          ],
+          "account": []
+        }
+      }
+    }
+  </script>
+  <div data-target="react-partial.reactRoot">
+    <input
+      type="hidden"
+      data-testid="hidden-input-actions"
+      name="integration[default_permissions][actions]"
+      value="none"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-statuses"
+      name="integration[default_permissions][statuses]"
+      value="none"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-contents"
+      name="integration[default_permissions][contents]"
+      value="none"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-issues"
+      name="integration[default_permissions][issues]"
+      value="none"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-metadata"
+      name="integration[default_permissions][metadata]"
+      value="read"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-pull_requests"
+      name="integration[default_permissions][pull_requests]"
+      value="none"
+    /><input
+      type="hidden"
+      data-testid="hidden-input-actions_variables"
+      name="integration[default_permissions][actions_variables]"
+      value="none"
+    />
+    <div data-view-component="true" class="Subhead">
+      <h3 data-view-component="true" class="Subhead-heading Subhead-heading--large f3">
+        Permissions
+      </h3>
+    </div>
+    <p data-view-component="true" class="tmp-mb-3">
+      Choose the minimal permissions necessary for your needs.<!-- -->
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        class="Link--inTextBlock"
+        href="https://docs.github.com/rest/overview/permissions-required-for-fine-grained-personal-access-tokens"
+        >Learn more about permissions.</a
+      >
+    </p>
+    <div>
+      <div
+        id="_R_d_-list-view-container"
+        class="container__uZQXyV border border-2 rounded-2 tmp-mb-3"
+      >
+        <h2
+          class="sr-only prc-Heading-Heading-MtWFE"
+          data-component="Heading"
+          id="_R_d_-list-view-container-title"
+        >
+          Permissions
+        </h2>
+        <div id="_R_d_-list-view-metadata" class="container__FLA0EF flexibleHeight__w76w3G">
+          <div class="elementContainer__3yGXL9">
+            <div class="d-flex flex-col">
+              <div class="d-flex flex-row align-items-center">
+                <button
+                  data-component="Button"
+                  type="button"
+                  class="prc-Button-ButtonBase-9n-Xk container__YMc9qe selected__WxN2Tj"
+                  data-loading="false"
+                  data-no-visuals="true"
+                  data-size="medium"
+                  data-variant="invisible"
+                  data-has-count="true"
+                  aria-current="true"
+                >
+                  <span
+                    data-component="buttonContent"
+                    data-align="center"
+                    class="prc-Button-ButtonContent-Iohp5"
+                    ><span data-component="text" class="prc-Button-Label-FWkx3"
+                      ><div>Repositories</div></span
+                    ><span data-component="trailingVisual" class="prc-Button-VisualWrap-E4cnq"
+                      ><span
+                        aria-hidden="true"
+                        data-variant="secondary"
+                        data-component="ButtonCounter"
+                        class="prc-Button-CounterLabel-5hAs4 prc-CounterLabel-CounterLabel-X-kRU"
+                        >1</span
+                      ><span class="prc-VisuallyHidden-VisuallyHidden-Q0qSB">&nbsp;(1)</span></span
+                    ></span
+                  >
+                </button>
+              </div>
+              <div class="d-flex flex-row align-items-center">
+                <button
+                  data-component="Button"
+                  type="button"
+                  class="prc-Button-ButtonBase-9n-Xk container__YMc9qe"
+                  data-loading="false"
+                  data-no-visuals="true"
+                  data-size="medium"
+                  data-variant="invisible"
+                  data-has-count="true"
+                >
+                  <span
+                    data-component="buttonContent"
+                    data-align="center"
+                    class="prc-Button-ButtonContent-Iohp5"
+                    ><span data-component="text" class="prc-Button-Label-FWkx3"
+                      ><div>Account</div></span
+                    ><span data-component="trailingVisual" class="prc-Button-VisualWrap-E4cnq"
+                      ><span
+                        aria-hidden="true"
+                        data-variant="secondary"
+                        data-component="ButtonCounter"
+                        class="prc-Button-CounterLabel-5hAs4 prc-CounterLabel-CounterLabel-X-kRU"
+                        >0</span
+                      ><span class="prc-VisuallyHidden-VisuallyHidden-Q0qSB"
+                        >&nbsp;(<!-- -->0<!-- -->)</span
+                      ></span
+                    ></span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container__T-3mZN">
+            <button
+              data-component="Button"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              tabindex="0"
+              aria-label="Add permissions"
+              class="prc-Button-ButtonBase-9n-Xk"
+              data-loading="false"
+              data-no-visuals="true"
+              data-size="medium"
+              data-variant="default"
+              id="_R_dqt_"
+              style="anchor-name: --anchored-overlay-anchor-_R_dqtH1_"
+            >
+              <span
+                data-component="buttonContent"
+                data-align="center"
+                class="prc-Button-ButtonContent-Iohp5"
+                ><span data-component="text" class="prc-Button-Label-FWkx3"
+                  ><svg
+                    data-component="Octicon"
+                    aria-hidden="true"
+                    focusable="false"
+                    class="octicon octicon-plus tmp-pr-4"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    display="inline-block"
+                    overflow="visible"
+                    style="vertical-align: text-bottom"
+                  >
+                    <path
+                      d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"
+                    ></path></svg
+                  ><span>Add permissions</span></span
+                ></span
+              >
+            </button>
+          </div>
+        </div>
+        <ul
+          style="min-height: 250px; max-height: 400px; overflow-y: auto"
+          class="ul__5IxUHb withMetadata__klorrw"
+          aria-labelledby="_R_d_-list-view-container-title"
+          tabindex="-1"
+          role="list"
+          data-listview-component="items-list"
+          data-density="default"
+        >
+          <li
+            id="_R_d_-list-view-node-_r_4v_"
+            class="listItem__X41oTe"
+            tabindex="0"
+            aria-label="Metadata. More information available below."
+            style="padding-left: 16px; background: transparent"
+          >
+            <div
+              style="padding-top: 16px"
+              class="container__mDVuhO"
+              data-listview-item-title-container="true"
+            >
+              <h3 class="heading__fzQskI" style="font-size: 14px"><span>Metadata</span></h3>
+              <span class="trailingBadgesContainer__4AEjpg"></span>
+            </div>
+            <div class="container__VGL_Vt">
+              <div class="inner__Rm1Enx">
+                <div class="container__W45oI6" style="padding-bottom: 12px">
+                  Search repositories, list collaborators, and access repository metadata.<a
+                    href="https://docs.github.com/rest/overview/permissions-required-for-fine-grained-personal-access-tokens#repository-permissions-for-metadata"
+                    class="Link--inTextBlock"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    >Learn more.</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="container__1MF1B1">
+              <div class="metadata__lB1fsH secondary__A3WMMH alignRight__Yldhd0">
+                <button
+                  data-component="ActionMenu.Button"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  tabindex="-1"
+                  class="prc-Button-ButtonBase-9n-Xk"
+                  data-loading="false"
+                  data-size="small"
+                  data-variant="default"
+                  id="_r_57_"
+                  style="anchor-name: --anchored-overlay-anchor-_r_59_"
+                >
+                  <span
+                    data-component="buttonContent"
+                    data-align="center"
+                    class="prc-Button-ButtonContent-Iohp5"
+                    ><span data-component="text" class="prc-Button-Label-FWkx3"
+                      ><span class="color-fg-subtle mr-1">Access:</span>Read-only</span
+                    ></span
+                  ><span
+                    data-component="trailingAction"
+                    class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"
+                    ><svg
+                      data-component="Octicon"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="octicon octicon-triangle-down"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      display="inline-block"
+                      overflow="visible"
+                      style="vertical-align: text-bottom"
+                    >
+                      <path
+                        d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
+                      ></path></svg
+                  ></span></button
+                ><button
+                  data-component="IconButton"
+                  type="button"
+                  class="prc-Button-ButtonBase-9n-Xk prc-Button-IconButton-fyge7"
+                  data-loading="false"
+                  data-no-visuals="true"
+                  data-size="small"
+                  data-variant="invisible"
+                  aria-labelledby="_r_52_"
+                  tabindex="-1"
+                >
+                  <svg
+                    data-component="Octicon"
+                    aria-hidden="true"
+                    focusable="false"
+                    class="octicon octicon-x"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    display="inline-block"
+                    overflow="visible"
+                    style="vertical-align: text-bottom"
+                  >
+                    <path
+                      d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+                    ></path>
+                  </svg></button
+                ><span
+                  class="prc-TooltipV2-Tooltip-tLeuB"
+                  data-direction="s"
+                  data-component="Tooltip"
+                  aria-hidden="true"
+                  id="_r_52_"
+                  popover="auto"
+                  style="top: 1232.5px; left: 1113.32px"
+                  >Remove Metadata</span
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</react-partial>

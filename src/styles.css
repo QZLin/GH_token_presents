@@ -1,0 +1,237 @@
+#gh-token-profiles-panel {
+  --profiles-bg: var(--bgColor-default, #fff);
+  --profiles-muted-bg: var(--bgColor-muted, #f6f8fa);
+  --profiles-fg: var(--fgColor-default, #1f2328);
+  --profiles-muted: var(--fgColor-muted, #57606a);
+  --profiles-border: var(--borderColor-default, #d0d7de);
+  position: fixed;
+  top: 72px;
+  right: 16px;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  width: min(288px, calc(100vw - 32px));
+  max-height: calc(100dvh - 88px);
+  overflow: auto;
+  padding: 14px;
+  border: 1px solid var(--profiles-border);
+  border-radius: 12px;
+  background: var(--profiles-bg);
+  color: var(--profiles-fg);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+  font:
+    12px/1.5 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Helvetica,
+    Arial,
+    sans-serif;
+  color-scheme: light dark;
+}
+
+#gh-token-profiles-panel h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+#gh-token-profiles-panel button,
+#gh-token-profiles-panel textarea,
+#gh-token-profiles-panel select {
+  box-sizing: border-box;
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 1px solid var(--profiles-border);
+  border-radius: 6px;
+  background: var(--profiles-muted-bg);
+  color: var(--profiles-fg);
+  font: inherit;
+}
+
+#gh-token-profiles-panel select {
+  width: 100%;
+  margin-bottom: 6px;
+  background: var(--profiles-bg);
+}
+
+#gh-token-profiles-panel button {
+  flex: 1;
+  cursor: pointer;
+}
+
+#gh-token-profiles-panel button:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+#gh-token-profiles-panel button:focus-visible,
+#gh-token-profiles-panel textarea:focus-visible,
+#gh-token-profiles-panel select:focus-visible {
+  outline: 2px solid var(--focus-outlineColor, #0969da);
+  outline-offset: 2px;
+}
+
+#gh-token-profiles-panel button:disabled,
+#gh-token-profiles-panel select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#gh-token-profiles-panel .toggle {
+  flex: none;
+  min-height: auto;
+  padding: 2px 4px;
+  border: none;
+  background: transparent;
+  color: var(--profiles-muted);
+  font-size: 11px;
+  font-weight: normal;
+}
+
+#gh-token-profiles-panel.collapsed .body {
+  display: none;
+}
+
+#gh-token-profiles-panel.collapsed h3 {
+  margin-bottom: 0;
+}
+
+#gh-token-profiles-panel .row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+#gh-token-profiles-panel .info,
+#gh-token-profiles-panel .status {
+  min-height: 16px;
+  margin: 6px 0 10px;
+  color: var(--profiles-muted);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+#gh-token-profiles-panel .status {
+  margin: 8px 0 0;
+}
+
+#gh-token-profiles-panel .hint {
+  margin: 6px 0 0;
+  color: var(--profiles-muted);
+  font-size: 10px;
+}
+
+#gh-token-profiles-panel .cleanup-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 2px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+#gh-token-profiles-panel [role='switch'] {
+  appearance: none;
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 18px;
+  margin: 0;
+  border: 1px solid var(--profiles-border);
+  border-radius: 999px;
+  background: var(--profiles-muted-bg);
+  cursor: pointer;
+}
+
+#gh-token-profiles-panel [role='switch']::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--profiles-muted);
+}
+
+#gh-token-profiles-panel [role='switch']:checked {
+  background: var(--bgColor-success-emphasis, #238636);
+}
+
+#gh-token-profiles-panel [role='switch']:checked::before {
+  transform: translateX(14px);
+  background: #fff;
+}
+
+#gh-token-profiles-panel [role='switch']:focus-visible {
+  outline: 2px solid var(--focus-outlineColor, #0969da);
+  outline-offset: 2px;
+}
+
+#gh-token-profiles-panel [role='switch']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#gh-token-profiles-panel #gh-token-cleanup-hint {
+  margin-bottom: 10px;
+}
+
+#gh-token-profiles-panel .transfer {
+  margin: 12px 0 0;
+  padding: 10px 0 0;
+  border: 0;
+  border-top: 1px solid var(--profiles-border);
+}
+
+#gh-token-profiles-panel .transfer[hidden] {
+  display: none;
+}
+
+#gh-token-profiles-panel .transfer-title {
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#gh-token-profiles-panel textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  margin: 6px 0;
+  background: var(--profiles-bg);
+  font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 11px;
+}
+
+#gh-token-profiles-panel .transfer .hint {
+  margin-bottom: 8px;
+}
+
+#gh-token-profiles-panel .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+[data-color-mode='dark'] #gh-token-profiles-panel {
+  --profiles-bg: var(--bgColor-default, #0d1117);
+  --profiles-muted-bg: var(--bgColor-muted, #161b22);
+  --profiles-fg: var(--fgColor-default, #e6edf3);
+  --profiles-muted: var(--fgColor-muted, #8b949e);
+  --profiles-border: var(--borderColor-default, #30363d);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-color-mode='light']) #gh-token-profiles-panel {
+    --profiles-bg: var(--bgColor-default, #0d1117);
+    --profiles-muted-bg: var(--bgColor-muted, #161b22);
+    --profiles-fg: var(--fgColor-default, #e6edf3);
+    --profiles-muted: var(--fgColor-muted, #8b949e);
+    --profiles-border: var(--borderColor-default, #30363d);
+  }
+}

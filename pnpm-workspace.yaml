@@ -1,0 +1,10 @@
+packages:
+  - .
+
+engineStrict: true
+saveExact: true
+strictPeerDependencies: true
+
+# GHSA-g3hv-75wg-m249: patch affected modern minimatch without changing legacy 3.x.
+overrides:
+  'minimatch@>=7.0.0 <11.0.1': '11.0.5'

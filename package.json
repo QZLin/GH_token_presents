@@ -1,0 +1,54 @@
+{
+  "name": "github-token-profiles",
+  "private": true,
+  "version": "2.3.0",
+  "description": "GitHub fine-grained token permission and expiration profiles userscript",
+  "author": {
+    "name": "QZLin",
+    "url": "https://github.com/QZLin"
+  },
+  "copyright": "Copyright © 2026 QZLin",
+  "license": "MIT",
+  "homepage": "https://github.com/QZLin/GH_token_presents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QZLin/GH_token_presents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QZLin/GH_token_presents/issues"
+  },
+  "type": "module",
+  "packageManager": "pnpm@11.28.5",
+  "engines": {
+    "node": "^24.15.0 || >=26.0.0",
+    "pnpm": ">=11.28.0 <12"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "verify:dev": "node scripts/verify-dev.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build && node scripts/verify-build.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "check": "tsc --noEmit && eslint . && prettier --check . && vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "@vitest/coverage-v8": "5.1.0",
+    "eslint": "10.14.0",
+    "globals": "17.14.0",
+    "jsdom": "31.0.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.6",
+    "vite-plugin-monkey": "8.1.1",
+    "vitest": "5.1.0"
+  }
+}

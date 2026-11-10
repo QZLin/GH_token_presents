@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          standalone: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm audit --registry=https://registry.npmjs.org/ --audit-level=moderate
+      - run: pnpm check
+      - run: pnpm test:coverage
+      - run: pnpm build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-token-profiles
+          path: dist/*.user.js
+          if-no-files-found: error
